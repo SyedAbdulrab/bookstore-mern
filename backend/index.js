@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from 'cors';
 import bookRoutes from './routes/bookRoutes.js'
 const port = 3000;
 const app = express();
@@ -12,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/books',bookRoutes)
+app.use(cors())
 
 
 await mongoose
