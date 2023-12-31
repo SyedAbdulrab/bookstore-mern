@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/books',bookRoutes)
-app.use(cors())
+app.use(cors()) // CROSS ORIGIN REQUEST POLICY
 
 
 await mongoose
